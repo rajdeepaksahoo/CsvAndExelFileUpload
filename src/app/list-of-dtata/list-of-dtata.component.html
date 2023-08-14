@@ -1,0 +1,24 @@
+<h2 style="text-align: center;">Fetched Data</h2>
+
+<div class="main">
+    <table>
+    <thead>
+        <tr>
+        <th>ID</th>
+        <th>Period</th>
+        <th>Series Reference</th>
+        <th>Region Name</th>
+        <th>Filled Jobs</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of fetchedData">
+        <td>{{ item.id }}</td>
+        <td>{{ item.period }}</td>
+        <td>{{ item.seriesReference }}</td>
+        <td>{{ item.regionName }}</td>
+        <td>{{ item.filledJobs }}</td>
+        </tr>
+    </tbody>
+    </table>
+</div>

@@ -1,0 +1,17 @@
+<h2>File Upload</h2>
+<input type="file" (change)="onFileSelected($event)" />
+<div>
+  <label>
+    <input type="radio" name="fileType" value="csv" [(ngModel)]="selectedFileType"> Upload CSV
+  </label>
+  <label>
+    <input type="radio" name="fileType" value="excel" [(ngModel)]="selectedFileType"> Upload Excel
+  </label>
+</div>
+<button (click)="onUpload()">Upload</button>
+<div *ngIf="progress > 0">
+  <div class="progress">
+    <div class="progress-bar" [style.width.%]="progress">{{ progress }}%</div>
+  </div>
+</div>
+<p>{{ message }}</p>
